@@ -15,12 +15,7 @@ windows > system32 > drivers > etc
 
    http://www.test.com:8888  ==> 8888 ==> 192.168.1.20:8888
 
-
-
 ftp server program downlaod ==> installation ==> configuration (port 번호 설정) : 20/21
-
-
-
 
 신규로 개발되는 애플리케이션(프로그램 ) ---> IANA 기관 등록해서 
 
@@ -47,14 +42,9 @@ Broadcast 주소 : 2개
 Multicast 주소 : 5개 + @
 
 
-
 ARP 
  - request : broadcast
  - reply : unicast
-
-
-
-
 
 
 수신지 MAC 주소 조회 방법 
@@ -62,8 +52,6 @@ ARP
 - ARP request/reply 
 
 
-
-- L2/L3/L4/L7 주소 
 - unicast/broadcast/multicast packet 
 - ARP request(broadcast) / ARP reply (unicast) 
   ==> ARP cache table (arp -a) 
@@ -108,8 +96,6 @@ PC A에서 사용가능한 게이트웨이 주소는?
 - 경로 데이타베이스 없음 
 - 플러딩 방식으로만 데이타 전송 
 
-
-
 Hub : 1 / 없음 / 플러딩
 Switch : 2/ M A T / 포워딩, 플러딩 / 플러딩
 Router : 3 / Routing Table / 포워딩 / drop
@@ -119,23 +105,13 @@ Router : 3 / Routing Table / 포워딩 / drop
 4계층 주소 : Port
 7계층 주소 : 문자 
 
-
-
 << media translation >>
-
                  송IP        수IP        송MAC    수MAC
 PC1 --> RA  21.7      34.250       6666      2222   
 RA  --> RB   21.7      34.250       9999      3333      
 RB  --> FTP  21.7      34.250       7777      5555
 
-
 *수신지가 외부망에 있는 경우 : 수신지MAC 주소를 게이트웨이 MAC 주소를 사용 
-
-
-
-
-
-
 
 
                     송IP        수IP        송MAC    수MAC
@@ -164,86 +140,5 @@ www.test.com
  - echo request : A -->B
 
  제한된 시간에 echo-reply 가 오지않았다. 
-
-
-1. 255.255.255.255/192.168.1.255
-   FFFF.FFFF.FFFF
-
-2. 224~239 / 0100.5e
-
-3. 문자 주소(FQDN) <--> IP address
-
-4. 
-
-5. 
-
-6.  1/플러딩,  2/포워딩 플러딩 , 3/포워딩
-
-7. 수신지 IP / 송신지 서브넷마스크 / ARP / 수신지 MAC
-
-8. 수신지 IP / 송신지 서브넷마스크 / ARP / 게이트웨이 MAC
-
-
-
-
-라우터 
- - 라우팅 테이블 / IP address
- - 포워딩 
- 
-스위치 
- - 맥주소테이블 / MAC address
- - 포워딩
- - 플러딩 
-
-허브  
- - 없음/없음
- - 플러딩 
-
-
-수신지 IP add 조회순서
-수신지 MAC address 조회순서
-
-불가이유?
-
-ipconfig
-
-PC configuarion ==> Ping test ==> RT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
