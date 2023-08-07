@@ -42,11 +42,9 @@ ping 1.1.1.1
 
 재조립(수신지)
 
-3~5GB
  단편화 < 재조립 
-
- 3계층의 단편화된 데이타는 재조립 시 지연을 발생
- 4계증의 단편화를 권고하고 있음 
+  -  3계층의 단편화된 데이타는 재조립 시 지연을 발생
+  -  4계증의 단편화를 권고하고 있음 
 
  MTU ==> LAN card 종류에 따라서 MTU size는 정해져 있음
  MSS ==> 정해져 있는 size 는 없음 
@@ -59,19 +57,12 @@ ping 1.1.1.1
 Ethernet LAN card MTU = 1500byte
 Ethernet LAN card가 전송하는 실제 데이타 사이즈 = 1518byte 
 
-
-MSS = 4000byte
-원본 데이타 = 4000byte
-
-원본 데이타 = 4000byte
-MSS = 1300byte
+원본 데이타 = 4000byte / MSS = 4000byte
+원본 데이타 = 4000byte / MSS = 1300byte
 
 예제) Ethernet LAN card를 사용 중 일때 
         IP header = 20byte , TCP header = 30byte 일 경우 
-       적정한 MSS 사이즈는? 
-          
-        1500 - 20 - 30 = 1450
-
+       적정한 MSS 사이즈는?   1500 - 20 - 30 = 1450
         
 MTU 사이즈 조절 가능 
   ==> 사용자의 컴퓨터의 LAN Card 점보 패킷 지원 유무로 결정
@@ -101,94 +92,3 @@ Basic ARP
 - ARP requset : broadcast
 - ARP reply : unicast
 ----------------------------------------
-ip.ttl
-ip.src
-ip.dst
-
-tcp.flags.syn ==1
-
-(ip.src == 172.16.16.128 ) && (ip.dst == 74.125.95.104)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
