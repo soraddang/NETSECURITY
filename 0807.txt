@@ -1,0 +1,194 @@
+가변길이 헤더 ==> header length
+세션설정 또는 세션 해지 (가상회선 설정 또는 가상회선 해지)==> 데이타전송 않음
+
+1단계. ACK=0 AN =0
+
+2단계. ACK=1 AN = 768
+
+3단계. ACK=1 AN = 374
+         SYN=0 SN = 768
+
+0+0+ 1+768+ 1+374 + 768 = 1912
+
+흐름제어 : 송수신되는 데이타 양을 조절 (Windows size)
+
+
+3 WHS ==> 연결 설정
+4 WHS ==> 연결 해지 
+
+
+TCP ==> stream 기반
+UDP==> 메세지 기반 
+
+메세지 = stream_1 + steam_2 + stream_3
+
+TCP 기반 App
+  - 일반 텍스트 데이타 전송 
+  - 양방향 전송 
+
+UDP 기반 App
+   - Multimedia 데이타 전송 (실시간 멀티 미디어 데이타 전송 시) 
+   - 단방향 전송 
+
+IP Data는 
+1) 없을 수 있다
+2) 반드시 있다
+
+ping 1.1.1.1
+
+단편화(송신지)
+  App  4000byte
+     ==>  1500(A.1.1) + 1500(A.2.1) + 1000(A.3.0)
+
+재조립(수신지)
+
+3~5GB
+ 단편화 < 재조립 
+
+ 3계층의 단편화된 데이타는 재조립 시 지연을 발생
+ 4계증의 단편화를 권고하고 있음 
+
+ MTU ==> LAN card 종류에 따라서 MTU size는 정해져 있음
+ MSS ==> 정해져 있는 size 는 없음 
+
+* Ethernet LAN에서 3계층 단편화를 하지 않기 위해 MSS의 적정 사이즈는?
+
+  1500 - IP header - TCP header = MSS
+  (예)  1500 - 20 - 20 = 1460 
+
+Ethernet LAN card MTU = 1500byte
+Ethernet LAN card가 전송하는 실제 데이타 사이즈 = 1518byte 
+
+
+MSS = 4000byte
+원본 데이타 = 4000byte
+
+원본 데이타 = 4000byte
+MSS = 1300byte
+
+예제) Ethernet LAN card를 사용 중 일때 
+        IP header = 20byte , TCP header = 30byte 일 경우 
+       적정한 MSS 사이즈는? 
+          
+        1500 - 20 - 30 = 1450
+
+        
+MTU 사이즈 조절 가능 
+  ==> 사용자의 컴퓨터의 LAN Card 점보 패킷 지원 유무로 결정
+  ==> 기본 MTU 사이즈가 증가된 패킷 ==> 점보패킷
+
+SAP ==> Service Access Point 
+
+----------------------------
+4계층 프로토콜 : TCP, UDP  
+3계층 프로토콜 : IP, ICMP, ARP 
+2계층 프로토콜 : Ethernet LAN(CSMA/CD)
+--------------------------------
+ICMP
+ - 3계층에서 데이타의 정상적인 전송 여부를 확인(테스트)하기 위한 것 
+ - 신뢰성과 연결성의 점검 
+ - IP body에 기생
+ - IP를 support하기 위해서 만들어진 프로토콜 
+   (IP header들의 필드를 조절하면서 통신여부 점검)
+ - 오류메시지 또는 질의메시지 ==type/code
+
+
+MTU : Maximum 
+mTU : Minimum(46byte)
+
+-----------------------------------------
+Basic ARP 
+- ARP requset : broadcast
+- ARP reply : unicast
+----------------------------------------
+ip.ttl
+ip.src
+ip.dst
+
+tcp.flags.syn ==1
+
+(ip.src == 172.16.16.128 ) && (ip.dst == 74.125.95.104)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
