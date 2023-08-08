@@ -1,0 +1,11 @@
+deb http://ftp.daumkakao.com/ubuntu/ focal main
+deb http://archive.ubuntu.com/ubuntu/ focal main
+
+deb http://ftp.daumkakao.com/ubuntu/ focal universe
+deb http://archive.ubuntu.com/ubuntu/ focal universe
+
+deb http://ftp.daumkakao.com/ubuntu/ focal multiverse
+deb http://archive.ubuntu.com/ubuntu/ focal multiverse
+
+deb http://ftp.daumkakao.com/ubuntu/ focal restricted
+deb http://archive.ubuntu.com/ubuntu/ focal restricted
